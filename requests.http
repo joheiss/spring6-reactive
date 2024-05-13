@@ -1,0 +1,142 @@
+@url = http://localhost:8080/api/v2
+
+GET {{url}}/beers
+
+###
+
+GET {{url}}/beers/0
+
+###
+
+GET {{url}}/beers/1
+
+###
+
+GET {{url}}/beers/4
+
+###
+
+POST {{url}}/beers
+Content-Type: application/json
+
+{
+    "beerName": "Salvator Bock",
+    "beerStyle": "DARK",
+    "upc": "12345",
+    "price": 6.78,
+    "quantityOnHand": 7
+}
+
+###
+
+PUT {{url}}/beers/4
+Content-Type: application/json
+
+{
+  "beerName": "Salvator Bock **UPDATED AGAIN**",
+  "beerStyle": "STOUT",
+  "upc": "12342",
+  "quantityOnHand": 13,
+  "price": 11.23
+}
+
+###
+
+PUT {{url}}/beers/0
+Content-Type: application/json
+
+{
+  "beerName": "Salvator Bock **UPDATED AGAIN**",
+  "beerStyle": "STOUT",
+  "upc": "12342",
+  "quantityOnHand": 13,
+  "price": 11.23
+}
+
+###
+
+PATCH {{url}}/beers/4
+Content-Type: application/json
+
+{
+  "beerName": "**PATCHED ***"
+}
+
+###
+
+PATCH {{url}}/beers/4
+Content-Type: application/json
+
+{
+  "beerStyle": "DARK"
+}
+
+###
+DELETE {{url}}/beers/1
+
+###
+
+DELETE {{url}}/beers/0
+
+###
+
+GET {{url}}/customers
+
+###
+
+GET {{url}}/customers/0
+
+###
+
+GET {{url}}/customers/1
+
+###
+
+GET {{url}}/customers/5
+
+###
+
+POST {{url}}/customers
+Content-Type: application/json
+
+{
+    "name": "Post GbR"
+}
+
+###
+
+PUT {{url}}/customers/5
+Content-Type: application/json
+
+{
+    "name": "Post GbR **UPDATED**"
+}
+
+###
+
+PUT {{url}}/customers/0
+Content-Type: application/json
+
+{
+    "name": "Hamma Ned"
+}
+
+###
+
+PATCH {{url}}/customers/5
+Content-Type: application/json
+
+{
+  "name": "Post GbR **PATCHED **"
+}
+
+###
+
+###
+DELETE {{url}}/customers/5
+
+###
+
+DELETE {{url}}/customers/0
+
+###
