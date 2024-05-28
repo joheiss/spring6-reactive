@@ -32,7 +32,7 @@ public class BeerRepositoryTest {
             .subscribe(System.out::println);
     }
 
-    Beer getTestBeer() {
+    public static Beer getTestBeer() {
         return Beer.builder()
             .beerName("Paulaner Hell")
             .beerStyle("PALE ALE")
